@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Test cases for master page" skipped="0" tests="1" time="36.78" timestamp="2023-04-08 10:47:18"><testcase name="User try to login to the SRK Best homepage by entering valid username and password"><error message="Timed out after 2 seconds. Element not found&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.8.1', revision: '8ebccac989'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: driver.version: RemoteWebDriver&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.8.1', revision: '8ebccac989'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: driver.version: RemoteWebDriver
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: driver.version: unknown</error><system-err>Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: driver.version: RemoteWebDriver
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: driver.version: unknown&#13;
+uitl.UtilFactory.executeScript(UtilFactory.java:63)&#13;
+uitl.UtilFactory.highlight(UtilFactory.java:59)&#13;
+ui.LoginPage.enterData(LoginPage.java:43)&#13;
+StepDef.LoginStepDef.user_enters_username_and_password(LoginStepDef.java:44)&#13;
+✽.User enters username and password(file:///C:/Users/Shani.Kumar/Videos/ExamJsonAutomation/ExamJsonAutomation/src/test/resources/features/masterpage.feature:6)&#13;
+</system-err></testcase></testsuite>

@@ -1,0 +1,11 @@
+{
+  "cabinDetails":
+  {
+    "cabin_data_01":
+    {
+      "cabinname":"sunil",
+      "futurebooking": "10",
+      "comments": "xyz"
+    }
+  }
+}

@@ -1,0 +1,2373 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;title&gt;SRK Pure&lt;/title&gt; <br/>
+  &lt;base href="/"&gt; <br/>
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; <br/>
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&gt; <br/>
+  &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt; <br/>
+  &lt;meta name="apple-mobile-web-app-status-bar-style" content="black"&gt; <br/>
+  &lt;link rel="icon" href="assets/img/fav.png"&gt; <br/>
+  &lt;link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css"&gt; <br/>
+  &lt;meta name="theme-color" content="#1976d2"&gt; <br/>
+  &lt;script&gt;<br/>
+    window.env = {<br/>
+      envName: '${ENV_NAME}'<br/>
+    };<br/>
+<br/>
+  &lt;/script&gt; <br/>
+  &lt;link rel="stylesheet" href="solitaire-pure/final/styles.2a82fe97028828515021.css"&gt;<br/>
+  &lt;link rel="stylesheet" href=""&gt;<br/>
+  &lt;link rel="stylesheet" href="solitaire-pure/final/srkexports-color-theme.f98b37e091b8d5d72caf.css"&gt;<br/>
+  &lt;style type="text/css"&gt;/* Chart.js */<br/>
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}&lt;/style&gt;<br/>
+  &lt;style&gt;&lt;/style&gt;<br/>
+  &lt;style&gt;.loader[_ngcontent-c2], .loader[_ngcontent-c2]:after {<br/>
+  border-radius: 50%;<br/>
+  width: 10em;<br/>
+  height: 10em; }<br/>
+<br/>
+.loader[_ngcontent-c2] {<br/>
+  margin: 0px auto;<br/>
+  font-size: 10px;<br/>
+  position: relative;<br/>
+  text-indent: -9999em;<br/>
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);<br/>
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);<br/>
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);<br/>
+  border-left: 1.1em solid #23fff4;<br/>
+  transform: translateZ(0);<br/>
+  -webkit-animation: load8 1.1s infinite linear;<br/>
+  animation: load8 1.1s infinite linear; }<br/>
+<br/>
+@-webkit-keyframes load8 {<br/>
+  0% {<br/>
+    transform: rotate(0deg); }<br/>
+  100% {<br/>
+    transform: rotate(360deg); } }<br/>
+<br/>
+@keyframes load8 {<br/>
+  0% {<br/>
+    transform: rotate(0deg); }<br/>
+  100% {<br/>
+    transform: rotate(360deg); } }<br/>
+<br/>
+<br/>
+<br/>
+.srkloader[_ngcontent-c2] {<br/>
+  max-width: 9%;<br/>
+  left: 0;<br/>
+  right: 0;<br/>
+  margin: auto;<br/>
+  top: 0;<br/>
+  position: fixed;<br/>
+  z-index: 9999;<br/>
+  bottom: 0;<br/>
+  height: 80px;<br/>
+  width: 80px; }<br/>
+<br/>
+.srkloader[_ngcontent-c2]:before {<br/>
+  content: "";<br/>
+  position: fixed;<br/>
+  left: 0;<br/>
+  right: 0;<br/>
+  top: 0;<br/>
+  bottom: 0;<br/>
+  width: 100%;<br/>
+  height: 100%;<br/>
+  background: rgba(0, 0, 0, 0.5);<br/>
+  z-index: -1; }<br/>
+<br/>
+<br/>
+<br/>
+.lds-roller[_ngcontent-c2] {<br/>
+  display: inline-block;<br/>
+  position: relative;<br/>
+  width: 64px;<br/>
+  height: 64px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2] {<br/>
+  -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;<br/>
+          animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;<br/>
+  transform-origin: 32px 32px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:after {<br/>
+  content: " ";<br/>
+  display: block;<br/>
+  position: absolute;<br/>
+  width: 6px;<br/>
+  height: 6px;<br/>
+  border-radius: 50%;<br/>
+  background: #fff;<br/>
+  margin: -3px 0 0 -3px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(1) {<br/>
+  -webkit-animation-delay: -0.036s;<br/>
+          animation-delay: -0.036s; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(1):after {<br/>
+  top: 50px;<br/>
+  left: 50px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(2) {<br/>
+  -webkit-animation-delay: -0.072s;<br/>
+          animation-delay: -0.072s; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(2):after {<br/>
+  top: 54px;<br/>
+  left: 45px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(3) {<br/>
+  -webkit-animation-delay: -0.108s;<br/>
+          animation-delay: -0.108s; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(3):after {<br/>
+  top: 57px;<br/>
+  left: 39px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(4) {<br/>
+  -webkit-animation-delay: -0.144s;<br/>
+          animation-delay: -0.144s; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(4):after {<br/>
+  top: 58px;<br/>
+  left: 32px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(5) {<br/>
+  -webkit-animation-delay: -0.18s;<br/>
+          animation-delay: -0.18s; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(5):after {<br/>
+  top: 57px;<br/>
+  left: 25px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(6) {<br/>
+  -webkit-animation-delay: -0.216s;<br/>
+          animation-delay: -0.216s; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(6):after {<br/>
+  top: 54px;<br/>
+  left: 19px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(7) {<br/>
+  -webkit-animation-delay: -0.252s;<br/>
+          animation-delay: -0.252s; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(7):after {<br/>
+  top: 50px;<br/>
+  left: 14px; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(8) {<br/>
+  -webkit-animation-delay: -0.288s;<br/>
+          animation-delay: -0.288s; }<br/>
+<br/>
+.lds-roller[_ngcontent-c2]   div[_ngcontent-c2]:nth-child(8):after {<br/>
+  top: 45px;<br/>
+  left: 10px; }<br/>
+<br/>
+@-webkit-keyframes lds-roller {<br/>
+  0% {<br/>
+    transform: rotate(0deg); }<br/>
+  100% {<br/>
+    transform: rotate(360deg); } }<br/>
+<br/>
+@keyframes lds-roller {<br/>
+  0% {<br/>
+    transform: rotate(0deg); }<br/>
+  100% {<br/>
+    transform: rotate(360deg); } }&lt;/style&gt;<br/>
+  &lt;style&gt;img[_ngcontent-c5] {<br/>
+  min-height: 100%;<br/>
+  width: 100%;<br/>
+  height: auto; }<br/>
+<br/>
+.close[_ngcontent-c5] {<br/>
+  position: absolute;<br/>
+  right: 20px;<br/>
+  padding: 20px;<br/>
+  cursor: pointer;<br/>
+  font-size: 20px;<br/>
+  height: 40px;<br/>
+  top: 0px; }<br/>
+<br/>
+.close[_ngcontent-c5]   img[_ngcontent-c5] {<br/>
+  height: 20px;<br/>
+  width: 20px; }<br/>
+<br/>
+#bgvid[_ngcontent-c5] {<br/>
+  width: 100%;<br/>
+  top: 0px;<br/>
+  bottom: 0px;<br/>
+  left: 0px;<br/>
+  right: 0px;<br/>
+  display: block; }<br/>
+<br/>
+#mainBoxId[_ngcontent-c5] {<br/>
+  position: relative;<br/>
+  background-color: #9e9e9e;<br/>
+  height: 100%; }<br/>
+<br/>
+.close-icon[_ngcontent-c5] {<br/>
+  font-size: 20px; }<br/>
+<br/>
+div#commonBox[_ngcontent-c5] {<br/>
+  height: 100vh;<br/>
+  position: relative; }<br/>
+<br/>
+.container-height100[_ngcontent-c5] {<br/>
+  display: flex;<br/>
+  align-items: center; }<br/>
+<br/>
+.video-container[_ngcontent-c5] {<br/>
+  position: relative;<br/>
+  height: 100%; }<br/>
+<br/>
+@media (max-width: 768px) {<br/>
+  .close-icon[_ngcontent-c5] {<br/>
+    font-size: 15px; } }&lt;/style&gt;<br/>
+  &lt;style&gt;form[_ngcontent-c6] {<br/>
+  width: 100%; }<br/>
+<br/>
+.loginForm-content[_ngcontent-c6] {<br/>
+  margin: auto;<br/>
+  float: none; }<br/>
+<br/>
+.login-title[_ngcontent-c6] {<br/>
+  font-size: 40px;<br/>
+  padding-left: 15px;<br/>
+  font-weight: normal;<br/>
+  line-height: normal; }<br/>
+<br/>
+.input-box[_ngcontent-c6] {<br/>
+  font-size: 14px;<br/>
+  line-height: 16px;<br/>
+  padding: 10px 10px 10px 5px;<br/>
+  -webkit-appearance: none;<br/>
+  width: 100%;<br/>
+  margin-left: 15px;<br/>
+  border-radius: 0; }<br/>
+<br/>
+.icon-label[_ngcontent-c6] {<br/>
+  font-size: 20px; }<br/>
+<br/>
+.error[_ngcontent-c6] {<br/>
+  padding: 0px 0px 0px 15px;<br/>
+  color: red; }<br/>
+<br/>
+.info-ip[_ngcontent-c6] {<br/>
+  padding: 0px 0px 0px 15px; }<br/>
+<br/>
+.ip-popup-row[_ngcontent-c6] {<br/>
+  cursor: pointer; }<br/>
+<br/>
+.ip-popup-highlighted[_ngcontent-c6] {<br/>
+  background-color: #afd3e7 !important; }<br/>
+<br/>
+.custom-btnPrimary[_ngcontent-c6] {<br/>
+  width: 100%;<br/>
+  margin-left: 15px;<br/>
+  padding: 5px 12px; }<br/>
+<br/>
+.forgot-pwd[_ngcontent-c6] {<br/>
+  cursor: pointer;<br/>
+  font-size: 14px;<br/>
+  margin-left: 15px; }<br/>
+<br/>
+.registrt-now[_ngcontent-c6] {<br/>
+  cursor: pointer;<br/>
+  font-size: 14px; }<br/>
+<br/>
+.form-group[_ngcontent-c6]    &gt; div[_ngcontent-c6] {<br/>
+  margin-top: 20px; }<br/>
+<br/>
+.captcha[_ngcontent-c6] {<br/>
+  height: 100px;<br/>
+  margin-left: 15px; }<br/>
+<br/>
+a[_ngcontent-c6] {<br/>
+  cursor: pointer; }<br/>
+<br/>
+.rc-anchor-light[_ngcontent-c6] {<br/>
+  border: 0 !important; }<br/>
+<br/>
+.loginfooter[_ngcontent-c6] {<br/>
+  width: 100%;<br/>
+  margin-left: 15px;<br/>
+  margin-top: 40px;<br/>
+  text-align: center; }<br/>
+<br/>
+.loginfooter[_ngcontent-c6]   a[_ngcontent-c6] {<br/>
+  cursor: pointer;<br/>
+  text-decoration: underline; }<br/>
+<br/>
+.login-icon[_ngcontent-c6] {<br/>
+  font-size: 20px;<br/>
+  padding: 10px; }<br/>
+<br/>
+.login-other-actions[_ngcontent-c6] {<br/>
+  display: flex;<br/>
+  justify-content: space-between; }<br/>
+<br/>
+@media (max-width: 768px) {<br/>
+  .loginfooter[_ngcontent-c6] {<br/>
+    margin-top: 0px;<br/>
+    font-size: 12px; }<br/>
+  .login-title[_ngcontent-c6] {<br/>
+    font-size: 30px; }<br/>
+  .forgot-pwd[_ngcontent-c6], .registrt-now[_ngcontent-c6] {<br/>
+    font-size: 12px;<br/>
+    width: 50%; }<br/>
+  .login-icon[_ngcontent-c6] {<br/>
+    font-size: 15px; }<br/>
+  .registrt-now[_ngcontent-c6] {<br/>
+    margin-left: 15px; } }<br/>
+<br/>
+div#registerNowId[_ngcontent-c6] {<br/>
+  width: 50%;<br/>
+  margin: auto 0px;<br/>
+  text-align: right;<br/>
+  padding-right: 15px; }<br/>
+<br/>
+div#forgotPwdId[_ngcontent-c6] {<br/>
+  width: 50%;<br/>
+  margin: auto 0px;<br/>
+  text-align: left;<br/>
+  padding-left: 15px; }&lt;/style&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/50.197a9013b5ce6ebff933.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/common.34b906c9d820ad301572.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/129.393f854e8794c2a2b9df.js"&gt;&lt;/script&gt;<br/>
+  &lt;style&gt;.wrapper__minify[_ngcontent-c7] {<br/>
+  margin-left: 55px;<br/>
+  transition: margin-left 0.3s; }<br/>
+<br/>
+.wrapper[_ngcontent-c7] {<br/>
+  margin-left: 200px;<br/>
+  transition: margin-left 0.3s; }<br/>
+<br/>
+.chat-bot-btn-container[_ngcontent-c7] {<br/>
+  position: fixed;<br/>
+  right: 0;<br/>
+  bottom: 2px;<br/>
+  z-index: 9999; }<br/>
+<br/>
+.chat-bot-button[_ngcontent-c7] {<br/>
+  width: 30px;<br/>
+  height: 30px;<br/>
+  border: none;<br/>
+  outline: none;<br/>
+  border-radius: 50px;<br/>
+  cursor: pointer;<br/>
+  font-size: 0px; }<br/>
+<br/>
+.chat-bot-button[_ngcontent-c7]:hover {<br/>
+  width: 200px;<br/>
+  height: 30px;<br/>
+  border: none;<br/>
+  outline: none;<br/>
+  border-radius: 50px;<br/>
+  cursor: pointer;<br/>
+  font-size: 14px; }<br/>
+<br/>
+.icon-chat[_ngcontent-c7] {<br/>
+  font-size: 16px;<br/>
+  padding-right: 0px; }<br/>
+<br/>
+.chatboat-text[_ngcontent-c7] {<br/>
+  padding-left: 10px; }&lt;/style&gt;<br/>
+  &lt;style&gt;.main-sidebar[_ngcontent-c8] {<br/>
+  width: 200px;<br/>
+  background: #434453;<br/>
+  position: fixed;<br/>
+  height: 100vh;<br/>
+  overflow: hidden;<br/>
+  padding-top: 50px;<br/>
+  z-index: 5; }<br/>
+  .main-sidebar[_ngcontent-c8]   .main-sidebar--container[_ngcontent-c8] {<br/>
+    width: 280px;<br/>
+    height: 100%;<br/>
+    overflow-y: auto;<br/>
+    overflow-x: hidden; }<br/>
+  .main-sidebar[_ngcontent-c8]   .main-sidebar--container-menu[_ngcontent-c8] {<br/>
+    width: 200px;<br/>
+    list-style: none;<br/>
+    padding: 0;<br/>
+    transition: all 0.5s ease 0s; }<br/>
+  .main-sidebar[_ngcontent-c8]   .main-sidebar--container-menu[_ngcontent-c8]   li[_ngcontent-c8] {<br/>
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);<br/>
+      font-size: 14px;<br/>
+      color: #ffffff; }<br/>
+  .main-sidebar[_ngcontent-c8]   .main-sidebar--container-menu[_ngcontent-c8]   li[_ngcontent-c8]   a[_ngcontent-c8] {<br/>
+        padding: 8px 0px;<br/>
+        color: #ffffff;<br/>
+        display: flex; }<br/>
+  .main-sidebar[_ngcontent-c8]   .main-sidebar--container-menu[_ngcontent-c8]   li.active-menu[_ngcontent-c8]   a[_ngcontent-c8] {<br/>
+        background-color: #AFD3E7;<br/>
+        color: #434453; }<br/>
+  .main-sidebar[_ngcontent-c8]   .main-sidebar--container-menu[_ngcontent-c8]   li[_ngcontent-c8]   .menu-sidebar--content[_ngcontent-c8] {<br/>
+        display: flex; }<br/>
+  .main-sidebar[_ngcontent-c8]   .main-sidebar--container-menu[_ngcontent-c8]   li[_ngcontent-c8]   .menu-sidebar--content[_ngcontent-c8]   .item-media[_ngcontent-c8] {<br/>
+          font-size: 30px;<br/>
+          min-width: 70px;<br/>
+          margin-right: 5px;<br/>
+          text-align: center;<br/>
+          line-height: 36px;<br/>
+          padding-top: 5px; }<br/>
+  .main-sidebar[_ngcontent-c8]   .main-sidebar--container-menu[_ngcontent-c8]   li[_ngcontent-c8]   .menu-sidebar--content[_ngcontent-c8]   .item-label[_ngcontent-c8] {<br/>
+          display: flex;<br/>
+          align-items: center; }&lt;/style&gt;<br/>
+  &lt;style&gt;.main-header[_ngcontent-c9] {<br/>
+  background-color: #ffffff;<br/>
+  border-bottom: 1px solid rgba(105, 105, 117, 0.2);<br/>
+  z-index: 5;<br/>
+  height: 51px;<br/>
+  position: fixed;<br/>
+  right: 0;<br/>
+  left: 0;<br/>
+  display: flex; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9] {<br/>
+    display: inherit;<br/>
+    justify-content: space-between;<br/>
+    flex: 1; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header--toggler[_ngcontent-c9] {<br/>
+      display: inherit;<br/>
+      flex-flow: row nowrap;<br/>
+      align-items: stretch; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header--toggler[_ngcontent-c9]   .main-header--toggle-wrapper[_ngcontent-c9] {<br/>
+        background-color: #434453;<br/>
+        border-bottom: 1px solid rgba(105, 105, 117, 0.2);<br/>
+        display: inherit;<br/>
+        justify-content: flex-start;<br/>
+        align-items: center; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header--toggler[_ngcontent-c9]   .main-header-animate[_ngcontent-c9] {<br/>
+        flex: 1 0 200px;<br/>
+        transition: flex-basis 500ms ease 0s; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header--toggler[_ngcontent-c9]   .main-header-no-animate[_ngcontent-c9] {<br/>
+        flex: 1 0 70px;<br/>
+        transition: flex-basis 500ms ease 0s; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header--toggler[_ngcontent-c9]   .main-header--toggler-button[_ngcontent-c9] {<br/>
+        color: #ffffff;<br/>
+        padding-left: 24px;<br/>
+        font-size: 24px;<br/>
+        cursor: pointer; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header--toggler[_ngcontent-c9]   .main-header--toggler-srk-logo[_ngcontent-c9] {<br/>
+        display: inherit;<br/>
+        justify-content: center;<br/>
+        align-items: center;<br/>
+        padding-left: 15px; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9] {<br/>
+      display: flex;<br/>
+      align-items: center; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .main-header-right-search[_ngcontent-c9] {<br/>
+        border: 1px solid rgba(105, 105, 117, 0.2);<br/>
+        padding: 5px 10px;<br/>
+        border-radius: 4px; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .main-header-right-search[_ngcontent-c9]   .search-field[_ngcontent-c9] {<br/>
+          width: 0;<br/>
+          border: 0;<br/>
+          transition: width 500ms ease 0s; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .main-header-right-search[_ngcontent-c9]   .search-field.field_toggle[_ngcontent-c9] {<br/>
+            width: 250px; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .main-header-right-section-list[_ngcontent-c9] {<br/>
+        display: inherit;<br/>
+        list-style-type: none;<br/>
+        margin: 0; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .main-header--rounderCls[_ngcontent-c9] {<br/>
+        border-radius: 4px;<br/>
+        margin: 5px 10px;<br/>
+        cursor: pointer; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .main-header--rounderCls[_ngcontent-c9]   a[_ngcontent-c9] {<br/>
+          color: #434453; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .my-profile-section[_ngcontent-c9] {<br/>
+        margin: 5px 0px; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .my-profile-section[_ngcontent-c9]   .profile-name[_ngcontent-c9] {<br/>
+          white-space: nowrap;<br/>
+          overflow: hidden;<br/>
+          text-overflow: ellipsis;<br/>
+          float: right;<br/>
+          margin-left: 5px;<br/>
+          margin-top: 3px;<br/>
+          margin-right: 10px; }<br/>
+.main-header[_ngcontent-c9]   .main-header--wrapper[_ngcontent-c9]   .main-header-right-section[_ngcontent-c9]   .fa[_ngcontent-c9] {<br/>
+        font-size: 16px; }<br/>
+.hrader-icon[_ngcontent-c9] {<br/>
+  font-size: 20px;<br/>
+  padding: 6px;<br/>
+  border-radius: 40px;<br/>
+  background-color: #f5f9fb;<br/>
+  border: 1px solid #cfeaf9; }<br/>
+.text-trans[_ngcontent-c9] {<br/>
+  background-color: #434453;<br/>
+  border: 0px;<br/>
+  border-bottom: 1px solid #999;<br/>
+  outline: 0px;<br/>
+  color: #fff;<br/>
+  box-shadow: none; }<br/>
+.text-trans[_ngcontent-c9]:focus {<br/>
+  background-color: #434453;<br/>
+  border: 0px;<br/>
+  border-bottom: 1px solid #ffffff;<br/>
+  outline: 0px;<br/>
+  box-shadow: none; }&lt;/style&gt;<br/>
+  &lt;style&gt;.slider-home-div[_ngcontent-c12] {<br/>
+  text-align: center; }<br/>
+<br/>
+.slider-home-button[_ngcontent-c12] {<br/>
+  font-size: 1.2em;<br/>
+  padding: 0.4em; }<br/>
+<br/>
+.slider-home-icon[_ngcontent-c12] {<br/>
+  cursor: pointer; }<br/>
+<br/>
+.menu-tab-main-container[_ngcontent-c12] {<br/>
+  width: 100%;<br/>
+  display: flex; }<br/>
+<br/>
+.navigation-icons-bar[_ngcontent-c12] {<br/>
+  width: 2.5%;<br/>
+  text-align: center; }<br/>
+<br/>
+.navigation-icons[_ngcontent-c12] {<br/>
+  padding: 5px 5px 5px 5px;<br/>
+  height: 30px;<br/>
+  cursor: pointer; }<br/>
+<br/>
+.main-container-tab[_ngcontent-c12] {<br/>
+  width: 95%;<br/>
+  max-width: calc(95% - 1px);<br/>
+  display: flex;<br/>
+  overflow-x: hidden;<br/>
+  scroll-behavior: smooth; }<br/>
+<br/>
+.menu-item[_ngcontent-c12] {<br/>
+  display: flex;<br/>
+  padding: 7px 10px 3px 10px;<br/>
+  max-width: 200px;<br/>
+  border-bottom: 5px solid #ffffff; }<br/>
+<br/>
+.menu-item-divider[_ngcontent-c12] {<br/>
+  border-right: 1px solid #ccc; }<br/>
+<br/>
+.add-button-tab[_ngcontent-c12] {<br/>
+  top: 5px;<br/>
+  cursor: pointer;<br/>
+  position: relative; }&lt;/style&gt;<br/>
+  &lt;style&gt;.hyperlink-to-page[_ngcontent-c14] {<br/>
+  color: #337ab7; }<br/>
+<br/>
+.quick_link[_ngcontent-c14] {<br/>
+  border: 1px solid #cccccc;<br/>
+  background: #ffffff;<br/>
+  margin: 15px 0px;<br/>
+  padding: 0;<br/>
+  box-shadow: 0px 0px 10px #e7eff3; }<br/>
+<br/>
+.quick_link[_ngcontent-c14]   h5[_ngcontent-c14] {<br/>
+  font-size: 17px;<br/>
+  padding: 15px;<br/>
+  border-bottom: 1px solid #e7e7e7;<br/>
+  margin: 0; }<br/>
+<br/>
+ul.qllist[_ngcontent-c14] {<br/>
+  width: 100%;<br/>
+  list-style-type: none;<br/>
+  padding-left: 0px;<br/>
+  margin-bottom: 0; }<br/>
+<br/>
+.quick_link[_ngcontent-c14]   ul.qllist[_ngcontent-c14]   li[_ngcontent-c14] {<br/>
+  border-bottom: 1px solid #f2f2f2;<br/>
+  line-height: 170%;<br/>
+  padding: 3px 15px;<br/>
+  border-left: 2px solid #f2f2f2; }&lt;/style&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/1.940826182d8b0f9c683d.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/2.a637bbc95acf56806d5e.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/9.e394cc5ab669cfd964a2.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/11.bef9175ae5ef79794aff.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/34.838490a7752bd4eba33b.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/44.7c9e89679b75af30989e.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="solitaire-pure/final/68.a379ae18bae4bf72a65f.js"&gt;&lt;/script&gt;<br/>
+  &lt;style&gt;.host[_ngcontent-c22]     .appointment-master .refreshSize {<br/>
+  font-size: 25px; }<br/>
+<br/>
+.host[_ngcontent-c22]     .appointment-master .setting-icon {<br/>
+  margin-top: 9px;<br/>
+  font-size: 28px;<br/>
+  cursor: pointer; }&lt;/style&gt;<br/>
+  &lt;style&gt;.btn-header-icon[_ngcontent-c38] {<br/>
+  background-color: #00000008;<br/>
+  font-size: 14px;<br/>
+  height: 24px;<br/>
+  width: 24px;<br/>
+  padding: 2px;<br/>
+  text-align: center;<br/>
+  border-radius: 30px;<br/>
+  color: #000; }<br/>
+<br/>
+.setting-datetime[_ngcontent-c38] {<br/>
+  font-size: 14px;<br/>
+  margin: 2px; }&lt;/style&gt;<br/>
+  &lt;style&gt;[_nghost-c39]     .add-cabin .page-scroller {<br/>
+  overflow-y: hidden;<br/>
+  max-height: none; }<br/>
+<br/>
+[_nghost-c39]     .add-cabin .assign-chair {<br/>
+  width: 60px; }<br/>
+<br/>
+[_nghost-c39]     .add-cabin .disabled-time-picker {<br/>
+  pointer-events: none; }<br/>
+<br/>
+[_nghost-c39]     .add-cabin .overflow-down .ui-multiselect-panel.ui-widget.ui-widget-content.ui-corner-all.ui-shadow {<br/>
+  top: 24px;<br/>
+  bottom: auto; }<br/>
+<br/>
+.row[_ngcontent-c39] {<br/>
+  margin: 0px 0px !important; }<br/>
+<br/>
+.mt5[_ngcontent-c39] {<br/>
+  margin-top: 5px;<br/>
+  margin-bottom: 5px; }<br/>
+<br/>
+.hour-txt[_ngcontent-c39] {<br/>
+  margin-left: 100px; }<br/>
+<br/>
+.workingday-txt[_ngcontent-c39] {<br/>
+  margin-left: 15px; }<br/>
+<br/>
+.add-cabin[_ngcontent-c39] {<br/>
+  max-height: none; }<br/>
+<br/>
+.table-box[_ngcontent-c39] {<br/>
+  width: 80%;<br/>
+  margin: 15px auto; }<br/>
+<br/>
+.table-box[_ngcontent-c39]   .tabno[_ngcontent-c39] {<br/>
+  margin-bottom: 15px; }<br/>
+<br/>
+.cabin-container[_ngcontent-c39] {<br/>
+  height: calc(100vh - 210px);<br/>
+  overflow: auto; }<br/>
+<br/>
+.newcb.c-checkbox[_ngcontent-c39]   span[_ngcontent-c39] {<br/>
+  border: 0px solid #ccc;<br/>
+  background-color: #afd3e7;<br/>
+  color: #434453;<br/>
+  width: 40px;<br/>
+  height: 20px;<br/>
+  line-height: 20px;<br/>
+  margin-left: 0px;<br/>
+  margin-right: 0px;<br/>
+  position: relative; }<br/>
+<br/>
+.cabin-sap[_ngcontent-c39] {<br/>
+  padding-bottom: 10px;<br/>
+  border-bottom: 1px solid #f2f2f2;<br/>
+  margin-bottom: 10px; }&lt;/style&gt;<br/>
+  &lt;style&gt;*[_ngcontent-c43] {<br/>
+  padding: 0;<br/>
+  margin: 0;<br/>
+  box-sizing: border-box; }<br/>
+<br/>
+.slider-container[_ngcontent-c43] {<br/>
+  position: relative;<br/>
+  left: 200px;<br/>
+  width: 600px;<br/>
+  height: 40px;<br/>
+  <br/>
+  padding: 0px 5px; }<br/>
+<br/>
+.slider-bar[_ngcontent-c43] {<br/>
+  position: relative;<br/>
+  top: 9px;<br/>
+  width: 100%;<br/>
+  height: 4px;<br/>
+  background-color: #c8c8c8;<br/>
+  border: 0 none;<br/>
+  border-radius: 2px; }<br/>
+<br/>
+.try[_ngcontent-c43] {<br/>
+  margin-left: 10px; }<br/>
+<br/>
+.slider-hilight-bar[_ngcontent-c43] {<br/>
+  position: absolute;<br/>
+  width: 100%;<br/>
+  height: 4px;<br/>
+  border: 0 none;<br/>
+  background-color: #007ad9;<br/>
+  border-radius: 2px; }<br/>
+<br/>
+.slider-click-bar[_ngcontent-c43] {<br/>
+  position: absolute;<br/>
+  top: -6px;<br/>
+  width: 100%;<br/>
+  height: 16px;<br/>
+  border: 0 none;<br/>
+  background-color: transparent;<br/>
+  border-radius: 2px; }<br/>
+<br/>
+.slider-left-drag-pointer[_ngcontent-c43], .slider-right-drag-pointer[_ngcontent-c43] {<br/>
+  position: absolute;<br/>
+  height: 16px;<br/>
+  width: 16px;<br/>
+  background-color: #ffffff;<br/>
+  border: 2px solid #666666;<br/>
+  border-radius: 100%;<br/>
+  transition: border-color 0.2s;<br/>
+  cursor: pointer; }<br/>
+<br/>
+.slider-left-drag-pointer[_ngcontent-c43]:hover, .slider-right-drag-pointer[_ngcontent-c43]:hover {<br/>
+  border: 2px solid #007ad9; }<br/>
+<br/>
+.tool-tip[_ngcontent-c43] {<br/>
+  position: absolute;<br/>
+  display: inline-block;<br/>
+  width: 65px;<br/>
+  top: 21px;<br/>
+  border-radius: 5px;<br/>
+  background: black;<br/>
+  color: white;<br/>
+  text-align: center;<br/>
+  font-size: 14px;<br/>
+  font-family: Arial, Helvetica, sans-serif;<br/>
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75); }<br/>
+<br/>
+.arrow[_ngcontent-c43] {<br/>
+  position: absolute;<br/>
+  top: -5px;<br/>
+  left: 35px;<br/>
+  width: 0;<br/>
+  height: 0;<br/>
+  border-left: 5px solid transparent;<br/>
+  border-right: 5px solid transparent;<br/>
+  border-bottom: 5px solid black; }&lt;/style&gt;<br/>
+ &lt;/head&gt; <br/>
+ &lt;body class="ng-tns-0-9"&gt; &lt;app-root _nghost-c0="" ng-version="7.2.12"&gt;<br/>
+   &lt;div _ngcontent-c0="" class="app-navbar-fixed app-sidebar-fixed app-sidebar-closed app-slide-off" id="app"&gt;<br/>
+    &lt;router-outlet _ngcontent-c0=""&gt;&lt;/router-outlet&gt;&lt;app-admin-user _nghost-c7="" class="ng-tns-c7-5 ng-star-inserted"&gt;<br/>
+     &lt;thm-all-menu-sidebar _ngcontent-c7="" class="ng-tns-c7-5 ng-tns-c8-6" _nghost-c8=""&gt;<br/>
+      &lt;div _ngcontent-c8="" class="main-sidebar ng-trigger ng-trigger-menuToggler" style="width: 70px;"&gt;<br/>
+       &lt;div _ngcontent-c8="" class="main-sidebar--container"&gt;<br/>
+        &lt;ul _ngcontent-c8="" class="main-sidebar--container-menu"&gt;<br/>
+         &lt;!----&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted active-menu" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-Masters ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Masters <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-TrnReports ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              T-Report <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-Admin ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Admin Panel <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-PMS ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Party Search <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pure-search ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Pms Search <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-KYCVerification ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Party Verification <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-KAMDashboard2 ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              User Dashboard <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-CSS ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              CSS Quick Links <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Business-Summary ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Business Summary <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-SmartView ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Smart View-2 <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-ModifyRequest ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              CSS Modify Request <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Diamond-Search ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Stone Search <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-SaveSearch ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Saved Search <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pure-Cart ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Client Basket <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-InvoiceVerification ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Invoice Verification <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Payment-Details ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Payment Details <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-Appointment ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Appointment <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-ViewRequest ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Inter VR <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-MultiStoneView ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Multi-Stone View <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Certi-QL ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Certificate Quick Links <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-view-request ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Client View Request <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Box-Arrangement ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Box Arrangement <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Export-Pre-Plan ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Export Pre Plan Overview <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Consignment ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Consignment Overview <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Export ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Export Overview <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-OFC ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              OFC <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-ReversalProcess ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Reversal Process <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-IMS ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Stock Quick Links <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-Stock-Inventory ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Stock Inventory <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-HistoryReport ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Stone History <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-SmartView ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Smart View1 <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-GMS ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Grading Quick Link <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Lab-Result ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Lab Result <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Lab-Inward ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Lab Inward <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Grading-Transaction ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Grading Transaction <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Internal-transaction ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Internal Transaction <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-Certificate-Transactin ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Certificate Transaction(GMS) <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pure-calendar ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Event Quick Links <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-MAT ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              MAT Quick Links <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-SRK ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              .One Marketing Panel <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-RoughInward ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              MFG Inward/Outward <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="pureIcon-query-builder ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Dynamic Query Report <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-StockInward ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Stock Inward <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="PureNew-RadyforVendorListing ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Ready for Vendor listing <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;span _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;&lt;img _ngcontent-c8="" class="ng-tns-c8-6" style="max-width:34px;" src="./assets/img/countryFlag/AUSTRALIA.png"&gt;&lt;/span&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              HKDTC March 2023 <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;em _ngcontent-c8="" class="Pure-AMS"&gt;&lt;/em&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Account Module <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+         &lt;li _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted" style=""&gt;&lt;!----&gt;&lt;a _ngcontent-c8="" class="ng-tns-c8-6 ng-star-inserted"&gt;<br/>
+           &lt;div _ngcontent-c8="" class="menu-sidebar--content d-flex"&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-media" tooltipposition="right"&gt;<br/>
+             &lt;!----&gt;&lt;em _ngcontent-c8="" class="Pure-ProfileSetting ng-star-inserted"&gt;&lt;/em&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div _ngcontent-c8="" class="item-label d-flex align-items-center"&gt;<br/>
+              Profile <br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+        &lt;/ul&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/thm-all-menu-sidebar&gt;<br/>
+     &lt;thm-admin-header _ngcontent-c7="" class="ng-tns-c7-5 ng-tns-c9-7" _nghost-c9=""&gt;<br/>
+      &lt;header _ngcontent-c9="" class="main-header"&gt;<br/>
+       &lt;div _ngcontent-c9="" class="main-header--wrapper"&gt;<br/>
+        &lt;span _ngcontent-c9="" class="" hidden&gt;&lt;em _ngcontent-c9="" class="pure-hamburger-menu"&gt;&lt;/em&gt;&lt;/span&gt;<br/>
+        &lt;section _ngcontent-c9="" class="main-header--toggler"&gt;<br/>
+         &lt;div _ngcontent-c9="" class="main-header--toggle-wrapper ng-trigger ng-trigger-openClose" style="width: 70px;"&gt;<br/>
+          &lt;span _ngcontent-c9="" class="main-header--toggler-button"&gt;&lt;em _ngcontent-c9="" class="Pure-SRK"&gt;&lt;/em&gt;&lt;/span&gt;&lt;!----&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div _ngcontent-c9="" class="paddt15 ng-trigger ng-trigger-openCloseTabBar" style="width: calc(100vw - 450px);"&gt;<br/>
+          &lt;app-thm-menu-tab-slider _ngcontent-c9="" class="ng-tns-c9-7" _nghost-c12=""&gt;<br/>
+           &lt;div _ngcontent-c12="" igxtooltip="" id="igx-tooltip-0" class="igx-toggle--hidden igx-tooltip--hidden" aria-hidden="true" role="tooltip"&gt;<br/>
+            &lt;!----&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div _ngcontent-c12="" class="ui-g-12 ui-g-nopad menu-bar menu-bg"&gt;<br/>
+            &lt;div _ngcontent-c12="" class="menu-tab-main-container"&gt;<br/>
+             &lt;div _ngcontent-c12="" class="navigation-icons-bar"&gt;<br/>
+              &lt;img _ngcontent-c12="" class="navigation-icons" id="navigateToLeft" src="./assets/img/left.svg" hidden&gt;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div _ngcontent-c12="" class="main-container-tab"&gt;<br/>
+              &lt;!----&gt;<br/>
+              &lt;div _ngcontent-c12="" class="menu-item active-carousel ng-star-inserted" style=""&gt;<br/>
+               &lt;!----&gt;<br/>
+               &lt;div _ngcontent-c12="" class="text-tooltip span-pointer text-center w100 ng-star-inserted" hidedelay="50" id="MasterModuleTabButton"&gt;<br/>
+                 Masters &lt;!----&gt;<br/>
+               &lt;/div&gt;<br/>
+               &lt;div _ngcontent-c12="" class="w10 text-right ng-star-inserted"&gt;<br/>
+                &lt;i _ngcontent-c12="" class="fa fa-1x fa-times-circle close-button-tab" id="MasterModuleCloseButton"&gt;&lt;/i&gt;<br/>
+               &lt;/div&gt;&lt;!----&gt;<br/>
+              &lt;/div&gt;&lt;!----&gt;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div _ngcontent-c12="" class="navigation-icons-bar"&gt;<br/>
+              &lt;img _ngcontent-c12="" class="navigation-icons" id="navigateToRight" src="./assets/img/right.svg" hidden&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/app-thm-menu-tab-slider&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/section&gt;<br/>
+        &lt;section _ngcontent-c9="" class="main-header-right-section"&gt;<br/>
+         &lt;ul _ngcontent-c9="" class="main-header-right-section-list"&gt;<br/>
+          &lt;li _ngcontent-c9="" class="main-header--rounderCls my-profile-section" id="profileId"&gt;&lt;span _ngcontent-c9="" class="ng-tns-c9-7" id="profileImageId" tooltipevent="hover" tooltipposition="bottom"&gt;&lt;span _ngcontent-c9="" class="pure-user hrader-icon"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span _ngcontent-c9="" class="profile-name" id="profileNameId" title="PRABHU G DHOLAKIA"&gt; PPD &lt;/span&gt;&lt;/li&gt;<br/>
+          &lt;li _ngcontent-c9="" class="main-header--rounderCls"&gt;&lt;span _ngcontent-c9="" class="pure-notification hrader-icon"&gt;&lt;/span&gt;&lt;/li&gt;&lt;!----&gt;<br/>
+          &lt;li _ngcontent-c9="" class="main-header--rounderCls ng-tns-c9-7 ng-star-inserted"&gt;&lt;span _ngcontent-c9="" class="pure-chat hrader-icon"&gt;&lt;/span&gt;&lt;/li&gt;<br/>
+          &lt;li _ngcontent-c9="" class="main-header--rounderCls"&gt;&lt;a _ngcontent-c9="" class="header-icon" ptooltip="Sign Out" tooltipevent="hover" tooltipposition="left"&gt;&lt;span _ngcontent-c9="" class="pure-logout hrader-icon"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+         &lt;/ul&gt;<br/>
+        &lt;/section&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/header&gt;<br/>
+      &lt;p-dialog _ngcontent-c9="" class="ng-tns-c9-7 ng-tns-c1-8" header="Logout" styleclass="logout-wrapper"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/p-dialog&gt;<br/>
+     &lt;/thm-admin-header&gt;<br/>
+     &lt;div _ngcontent-c7="" class="app-content"&gt;<br/>
+      &lt;div _ngcontent-c7="" class="main-content ng-trigger ng-trigger-openClose" style="margin-left: 70px;"&gt;<br/>
+       &lt;div _ngcontent-c7="" class=""&gt;<br/>
+        &lt;div _ngcontent-c7="" class="menu-tab"&gt;<br/>
+         &lt;router-outlet _ngcontent-c7="" class="ng-tns-c7-5"&gt;&lt;/router-outlet&gt;&lt;app-admin-dashboard _nghost-c14="" class="ng-star-inserted" style=""&gt;<br/>
+          &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+          &lt;div _ngcontent-c14="" class="ng-star-inserted" style=""&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div _ngcontent-c14="" class="ui-g-12 ui-g-nopad ng-star-inserted"&gt;<br/>
+            &lt;!----&gt;&lt;app-sales-master _nghost-c15="" class="ng-tns-c15-11 ng-star-inserted" style=""&gt;<br/>
+             &lt;div _ngcontent-c15="" class="main-inner-content sales sales-modify-request sales-menu-tabs-slider"&gt;<br/>
+              &lt;div _ngcontent-c15="" class="container-fluid"&gt;<br/>
+               &lt;div _ngcontent-c15="" class="row border-b mb5"&gt;<br/>
+                &lt;div _ngcontent-c15="" class="respnsvtabs"&gt;<br/>
+                 &lt;div _ngcontent-c15="" class="col-md-11 col-xs-9"&gt;<br/>
+                  &lt;div _ngcontent-c15="" class="sales-master sales"&gt;<br/>
+                   &lt;app-thm-menu-tab-slider _ngcontent-c15="" class="ng-tns-c15-11" _nghost-c12=""&gt;<br/>
+                    &lt;div _ngcontent-c12="" igxtooltip="" id="igx-tooltip-1" class="igx-toggle--hidden igx-tooltip--hidden" aria-hidden="true" role="tooltip"&gt;<br/>
+                     &lt;!----&gt;<br/>
+                    &lt;/div&gt;<br/>
+                    &lt;div _ngcontent-c12="" class="ui-g-12 ui-g-nopad menu-bar menu-bg"&gt;<br/>
+                     &lt;div _ngcontent-c12="" class="menu-tab-main-container"&gt;<br/>
+                      &lt;div _ngcontent-c12="" class="navigation-icons-bar"&gt;<br/>
+                       &lt;img _ngcontent-c12="" class="navigation-icons" id="navigateToLeft" src="./assets/img/left.svg" hidden&gt;<br/>
+                      &lt;/div&gt;<br/>
+                      &lt;div _ngcontent-c12="" class="main-container-tab"&gt;<br/>
+                       &lt;!----&gt;<br/>
+                       &lt;div _ngcontent-c12="" class="menu-item menu-item-divider ng-star-inserted" style=""&gt;<br/>
+                        &lt;!----&gt;<br/>
+                        &lt;div _ngcontent-c12="" class="text-tooltip w100 span-pointer text-center ng-star-inserted" hidedelay="50" id="sales_master_dashboardTabButton"&gt;<br/>
+                          Sales Master Dashboard &lt;!----&gt;<br/>
+                        &lt;/div&gt;&lt;!----&gt;<br/>
+                       &lt;/div&gt;<br/>
+                       &lt;div _ngcontent-c12="" class="menu-item active-carousel ng-star-inserted" style=""&gt;<br/>
+                        &lt;!----&gt;<br/>
+                        &lt;div _ngcontent-c12="" class="text-tooltip span-pointer text-center w90 ng-star-inserted" hidedelay="50" id="cabinMasterTabButton"&gt;<br/>
+                          Cabin Master &lt;!----&gt;<br/>
+                        &lt;/div&gt;<br/>
+                        &lt;div _ngcontent-c12="" class="w10 text-right ng-star-inserted"&gt;<br/>
+                         &lt;i _ngcontent-c12="" class="fa fa-1x fa-times-circle close-button-tab" id="cabinMasterCloseButton"&gt;&lt;/i&gt;<br/>
+                        &lt;/div&gt;&lt;!----&gt;<br/>
+                       &lt;/div&gt;&lt;!----&gt;<br/>
+                      &lt;/div&gt;<br/>
+                      &lt;div _ngcontent-c12="" class="navigation-icons-bar"&gt;<br/>
+                       &lt;img _ngcontent-c12="" class="navigation-icons" id="navigateToRight" src="./assets/img/right.svg" hidden&gt;<br/>
+                      &lt;/div&gt;<br/>
+                     &lt;/div&gt;<br/>
+                    &lt;/div&gt;<br/>
+                   &lt;/app-thm-menu-tab-slider&gt;<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div _ngcontent-c15="" class="col-md-1 col-xs-3"&gt;<br/>
+                  &lt;ul _ngcontent-c15="" class="nav nav-tabs slider-tab border-bottom-none"&gt;<br/>
+                   &lt;!----&gt;<br/>
+                   &lt;li _ngcontent-c15="" class="setting-icon pull-right ng-tns-c15-11 ng-star-inserted" id="refreshSalesMasterTabscabinMaster"&gt;&lt;i _ngcontent-c15="" class="fa fa-undo value font-size14"&gt;&lt;/i&gt;&lt;/li&gt;<br/>
+                  &lt;/ul&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/div&gt;<br/>
+               &lt;/div&gt;<br/>
+               &lt;div _ngcontent-c15="" class="tab-content" hidden&gt;<br/>
+                &lt;div _ngcontent-c15="" class="tab-pane active in fade" id="salesMasterDashboardQuickLinks"&gt;<br/>
+                 &lt;div _ngcontent-c15="" class="col-sm-4 col-xs-12 clear-box"&gt;<br/>
+                  &lt;div _ngcontent-c15="" class="quick_link"&gt;<br/>
+                   &lt;h5 _ngcontent-c15="" class="border-b padd15"&gt; Common Master &lt;span _ngcontent-c15="" class=""&gt;&lt;button _ngcontent-c15="" class="fr btn btn-default" type="submit"&gt;&lt;i _ngcontent-c15="" class="glyphicon glyphicon-search"&gt;&lt;/i&gt;&lt;/button&gt;&lt;input _ngcontent-c15="" class="fr form-control ng-trigger ng-trigger-openClose" placeholder="Search" type="text" style="width: 0px; opacity: 0;"&gt;&lt;/span&gt;&lt;/h5&gt;<br/>
+                   &lt;ul _ngcontent-c15="" class="qllist"&gt;<br/>
+                    &lt;!----&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinkscabinMaster" style="border: 2px solid red;"&gt;Cabin Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksexportTimeMaster"&gt;Export Time Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksconsignment_master"&gt;Consignment Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinkscssQcRemarkMaster"&gt;CSS QC Remarks Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksconversion_master"&gt;Conversion Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinkspms_css_validation_master"&gt;PMS to CSS Validation Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksstoneLocationMaster"&gt;Stone Location Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-comment-o dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksreason_master"&gt;Reason Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinkscommunicationMaster"&gt;Communication Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksactionMappingMaster"&gt;Action Mapping Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksdaypSchedulerMaster"&gt;DAYP Scheduler Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                   &lt;/ul&gt;<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div _ngcontent-c15="" class="col-sm-4 col-xs-12 clear-box"&gt;<br/>
+                  &lt;div _ngcontent-c15="" class="quick_link"&gt;<br/>
+                   &lt;h5 _ngcontent-c15="" class="border-b padd15"&gt; Exclusive Master &lt;span _ngcontent-c15="" class=""&gt;&lt;button _ngcontent-c15="" class="fr btn btn-default" type="submit"&gt;&lt;i _ngcontent-c15="" class="glyphicon glyphicon-search"&gt;&lt;/i&gt;&lt;/button&gt;&lt;input _ngcontent-c15="" class="fr form-control ng-trigger ng-trigger-openClose" placeholder="Search" type="text" style="width: 0px; opacity: 0;"&gt;&lt;/span&gt;&lt;/h5&gt;<br/>
+                   &lt;ul _ngcontent-c15="" class="qllist"&gt;<br/>
+                    &lt;!----&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-map-marker dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinkslocation_master"&gt;Location Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-sitemap dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksdepartment_master"&gt;Department Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-circle-o-notch dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksprocess_status_master"&gt;Process-Status Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksdefined_actions"&gt;Defined Actions&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksbusiness_logics_master"&gt;Business Logics Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinkssale_group_and_sale_type_master"&gt;Sale Group &amp; Type&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-calendar-check-o dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinkssales_terms_master"&gt;Terms Master&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinkspop_module"&gt;POP Module&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-file-text dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksinvoice_combination_box"&gt;Invoice Combinations&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                    &lt;li _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted"&gt;&lt;!----&gt;&lt;!----&gt;&lt;i _ngcontent-c15="" class="fa fa-hand-o-right dashboard-icon ng-star-inserted"&gt;&lt;/i&gt;&lt;a _ngcontent-c15="" class="ng-tns-c15-11 ng-star-inserted" id="salesMasterDashboardQuickLinksstages_after_invoice_request"&gt;Stages After Invoice Request&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                   &lt;/ul&gt;<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/div&gt;<br/>
+               &lt;/div&gt;<br/>
+               &lt;div _ngcontent-c15="" class="tab-content"&gt;<br/>
+                &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                &lt;div _ngcontent-c15="" class="tab-pane fade active in ng-tns-c15-11 ng-star-inserted" style=""&gt;<br/>
+                 &lt;app-appointment-master _ngcontent-c15="" class="ng-tns-c15-11" _nghost-c22=""&gt;<br/>
+                  &lt;div _ngcontent-c22="" class="row border-b appointment-master" dirscrolltop=""&gt;<br/>
+                   &lt;div _ngcontent-c22="" class="col-md-12 col-xs-12"&gt;<br/>
+                    &lt;div _ngcontent-c22="" class="tabs stock-menu col-md-10"&gt;<br/>
+                     &lt;app-thm-menu-tab-slider _ngcontent-c22="" _nghost-c12=""&gt;<br/>
+                      &lt;div _ngcontent-c12="" igxtooltip="" id="igx-tooltip-2" class="igx-toggle--hidden igx-tooltip--hidden" aria-hidden="true" role="tooltip"&gt;<br/>
+                       &lt;!----&gt;<br/>
+                      &lt;/div&gt;<br/>
+                      &lt;div _ngcontent-c12="" class="ui-g-12 ui-g-nopad menu-bar menu-bg"&gt;<br/>
+                       &lt;div _ngcontent-c12="" class="menu-tab-main-container"&gt;<br/>
+                        &lt;div _ngcontent-c12="" class="navigation-icons-bar"&gt;<br/>
+                         &lt;img _ngcontent-c12="" class="navigation-icons" id="navigateToLeft" src="./assets/img/left.svg" hidden&gt;<br/>
+                        &lt;/div&gt;<br/>
+                        &lt;div _ngcontent-c12="" class="main-container-tab"&gt;<br/>
+                         &lt;!----&gt;<br/>
+                         &lt;div _ngcontent-c12="" class="menu-item active-carousel menu-item-divider ng-star-inserted"&gt;<br/>
+                          &lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c12="" class="text-tooltip w100 span-pointer text-center ng-star-inserted" hidedelay="50" id="addCabinTabButton"&gt;<br/>
+                            Add Cabin/Chair &lt;!----&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                         &lt;/div&gt;<br/>
+                         &lt;div _ngcontent-c12="" class="menu-item ng-star-inserted"&gt;<br/>
+                          &lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c12="" class="text-tooltip w100 span-pointer text-center ng-star-inserted" hidedelay="50" id="cabinListTabButton"&gt;<br/>
+                            Cabin Allotment &lt;!----&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                         &lt;/div&gt;&lt;!----&gt;<br/>
+                        &lt;/div&gt;<br/>
+                        &lt;div _ngcontent-c12="" class="navigation-icons-bar"&gt;<br/>
+                         &lt;img _ngcontent-c12="" class="navigation-icons" id="navigateToRight" src="./assets/img/right.svg" hidden&gt;<br/>
+                        &lt;/div&gt;<br/>
+                       &lt;/div&gt;<br/>
+                      &lt;/div&gt;<br/>
+                     &lt;/app-thm-menu-tab-slider&gt;<br/>
+                    &lt;/div&gt;<br/>
+                    &lt;div _ngcontent-c22="" class="col-md-2 col-xs-12"&gt;<br/>
+                     &lt;app-updateddatetime _ngcontent-c22="" _nghost-c38=""&gt;<br/>
+                      &lt;div _ngcontent-c38="" class="tabs stock-menu"&gt;<br/>
+                       &lt;ul _ngcontent-c38="" class="nav nav-tabs slider-tab"&gt;<br/>
+                        &lt;li _ngcontent-c38="" class="setting-icon pull-right" tooltipevent="hover" tooltipposition="left"&gt;&lt;span _ngcontent-c38="" class="btn-header-icon"&gt;&lt;i _ngcontent-c38="" class="fa fa-cog" id="settingButton"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;<br/>
+                        &lt;li _ngcontent-c38="" class="setting-icon pull-right"&gt;&lt;span _ngcontent-c38="" class="btn-header-icon"&gt;&lt;i _ngcontent-c38="" class="fa fa-refresh" id="refreshButton"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;&lt;!----&gt;&lt;span _ngcontent-c38="" class="ng-star-inserted"&gt;&lt;li _ngcontent-c38="" class="setting-icon pull-right last-update" title="Last Updated On : 4 April 2023 :  4:57 PM  "&gt;&lt;span _ngcontent-c38="" title="Last Updated On "&gt;&lt;span _ngcontent-c38="" class="btn-header-icon"&gt;&lt;i _ngcontent-c38="" class="fa fa-clock-o"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;label _ngcontent-c38="" class="setting-datetime"&gt; 4:57 PM &lt;/label&gt;&lt;/li&gt;&lt;/span&gt;&lt;!----&gt;<br/>
+                       &lt;/ul&gt;<br/>
+                      &lt;/div&gt;<br/>
+                     &lt;/app-updateddatetime&gt;<br/>
+                    &lt;/div&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div _ngcontent-c22="" class="container-fluid tab-content"&gt;<br/>
+                   &lt;div _ngcontent-c22="" class="tab-pane fade in active" id="Add Cabin/Chair"&gt;<br/>
+                    &lt;!----&gt;<br/>
+                    &lt;div _ngcontent-c22="" class="row ng-star-inserted"&gt;<br/>
+                     &lt;app-add-cabin _ngcontent-c22="" _nghost-c39=""&gt;<br/>
+                      &lt;div _ngcontent-c39="" class="add-cabin" id="cabin-table"&gt;<br/>
+                       &lt;div _ngcontent-c39="" class="row "&gt;<br/>
+                        &lt;div _ngcontent-c39="" class="col-md-4 col-sm-4 col-xs-12 padd0"&gt;<br/>
+                         &lt;div _ngcontent-c39="" class="row marg-b10"&gt;<br/>
+                          &lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 ng-star-inserted"&gt;<br/>
+                           &lt;label _ngcontent-c39="" class="control-label"&gt; Cabin &lt;/label&gt;&lt;span _ngcontent-c39=""&gt;&lt;/span&gt;<br/>
+                          &lt;/div&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 ng-star-inserted"&gt;<br/>
+                           &lt;!----&gt;&lt;p-dropdown _ngcontent-c39="" placeholder="Select cabin code" class="ng-tns-c41-14 ng-untouched ng-pristine ng-valid"&gt;<br/>
+                            &lt;div class="ng-tns-c41-14 ui-dropdown ui-widget ui-state-default ui-corner-all ui-helper-clearfix" style="width: 150px;"&gt;<br/>
+                             &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input class="ng-tns-c41-14" aria-haspopup="listbox" readonly type="text" aria-label=" "&gt;<br/>
+                             &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;&lt;label class="ng-tns-c41-14 ui-dropdown-label ui-inputtext ui-corner-all ui-placeholder ng-star-inserted"&gt;Select cabin code&lt;/label&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                             &lt;div class="ui-dropdown-trigger ui-state-default ui-corner-right"&gt;<br/>
+                              &lt;span class="ui-dropdown-trigger-icon ui-clickable pi pi-chevron-down"&gt;&lt;/span&gt;<br/>
+                             &lt;/div&gt;&lt;!----&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/p-dropdown&gt;<br/>
+                          &lt;/div&gt;<br/>
+                         &lt;/div&gt;<br/>
+                         &lt;br _ngcontent-c39=""&gt;<br/>
+                        &lt;/div&gt;<br/>
+                       &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                       &lt;div _ngcontent-c39="" class="row ng-star-inserted"&gt;<br/>
+                        &lt;div _ngcontent-c39="" class="col-md-4 col-sm-4 col-xs-12 padd0"&gt;<br/>
+                         &lt;div _ngcontent-c39="" class="box-container-white cabin-container"&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 padd0 cabin-sap"&gt;<br/>
+                            &lt;h4 _ngcontent-c39=""&gt;Cabin Details&lt;/h4&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row ng-star-inserted"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 padd0"&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt; Cabin Name&lt;/label&gt;&lt;span _ngcontent-c39="" class="mandate"&gt; *&lt;/span&gt;<br/>
+                           &lt;/div&gt;&lt;!----&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 padd0 cabin-sap ng-star-inserted"&gt;<br/>
+                            &lt;!----&gt;<br/>
+                            &lt;input _ngcontent-c39="" class="form-control custom_input ng-valid ng-dirty ng-touched" name="cabin_name" type="text" id="cabinOption" style="border: 2px solid red;"&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row ng-star-inserted"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 padd0"&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt; Time Slots&lt;/label&gt;&lt;span _ngcontent-c39="" class="mandate"&gt; *&lt;/span&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 time padd0 cabin-sap"&gt;<br/>
+                            &lt;!----&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="radio c-radio"&gt;<br/>
+                             &lt;!----&gt;&lt;label _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" id="30TimeSlot" class="ng-untouched ng-pristine ng-valid"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="1"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ui-radiobutton-label ng-star-inserted"&gt;30 Min&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;&lt;label _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" id="60TimeSlot" class="ng-valid ng-dirty ng-touched"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="2"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default ui-state-active" style="border: 2px solid red;"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable pi pi-circle-on"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ng-star-inserted ui-radiobutton-label ui-label-active"&gt;60 Min&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;&lt;label _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" id="90TimeSlot" class="ng-untouched ng-pristine ng-valid"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="3"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ui-radiobutton-label ng-star-inserted"&gt;90 Min&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 padd0" hidden="true"&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt; Time Interval&lt;/label&gt;&lt;span _ngcontent-c39="" class="mandate"&gt; *&lt;/span&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 time padd0 cabin-sap" hidden="true"&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="radio c-radio"&gt;<br/>
+                             &lt;!----&gt;&lt;label _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" disabled id="5TimeInterval" class="ng-untouched ng-pristine"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="4" disabled&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default ui-state-disabled"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ng-star-inserted ui-radiobutton-label ui-label-disabled"&gt;5 Min&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;&lt;label _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" disabled id="10TimeInterval" class="ng-untouched ng-pristine"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="5" disabled&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default ui-state-disabled"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ng-star-inserted ui-radiobutton-label ui-label-disabled"&gt;10 Min&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;&lt;label _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" disabled id="15TimeInterval" class="ng-untouched ng-pristine"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="6" disabled&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default ui-state-disabled"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ng-star-inserted ui-radiobutton-label ui-label-disabled"&gt;15 Min&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row ng-star-inserted"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 padd0 "&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt; Future Booking (In Days)&lt;/label&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12  padd0 cabin-sap"&gt;<br/>
+                            &lt;!----&gt;<br/>
+                            &lt;input _ngcontent-c39="" class="form-control custom_input ng-valid ng-dirty ng-touched" maxlength="3" type="text" id="10FutureBookingDay" style="border: 2px solid red;"&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row ng-star-inserted"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 padd0  "&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt; Comments&lt;/label&gt;<br/>
+                           &lt;/div&gt;&lt;!----&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12 padd0 cabin-sap"&gt;<br/>
+                             &lt;!----&gt;&lt;textarea _ngcontent-c39="" class="form-control textarea-resize-none ng-valid ng-dirty ng-touched" rows="4" id="LatestComment" style="border: 2px solid red;"&gt;&lt;/textarea&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row ng-star-inserted"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-12 col-xs-12"&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt; Status&lt;/label&gt;<br/>
+                           &lt;/div&gt;&lt;!----&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-4 col-xs-4"&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="switch label-switch pad5"&gt;<br/>
+                             &lt;input _ngcontent-c39="" name="checkbox5" type="checkbox" id="CabinStatus" value="true" class="ng-untouched ng-pristine ng-valid"&gt;&lt;!----&gt;&lt;label _ngcontent-c39="" for="CabinStatus" class="ng-star-inserted"&gt; Active&lt;/label&gt;&lt;!----&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sm-5 col-xs-4 fr"&gt;<br/>
+                            &lt;p-checkbox _ngcontent-c39="" binary="true" class="ng-untouched ng-pristine ng-valid"&gt;<br/>
+                             &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="checkbox" name="undefined" value="undefined"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/div&gt;&lt;!----&gt;<br/>
+                            &lt;/p-checkbox&gt;&lt;label _ngcontent-c39=""&gt;Is Show Status&lt;/label&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;<br/>
+                         &lt;/div&gt;<br/>
+                        &lt;/div&gt;<br/>
+                        &lt;div _ngcontent-c39="" class="col-md-4 col-sm-4 col-xs-12"&gt;<br/>
+                         &lt;div _ngcontent-c39="" class="box-container-white cabin-container"&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row cabin-sap"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-12 padd0"&gt;<br/>
+                            &lt;h4 _ngcontent-c39=""&gt;Cabin Allocation &lt;/h4&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row cabin-sap"&gt;<br/>
+                           &lt;!----&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-3 padd0 ng-star-inserted"&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt;Select&lt;/label&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-9   time padd0"&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="radio c-radio time"&gt;<br/>
+                             &lt;!----&gt;&lt;!----&gt;&lt;label _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" label="Cabin" value="Cabin" id="Cabin" class="ng-valid ng-dirty ng-touched"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="Cabin"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default ui-state-active" style="border: 2px solid red;"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable pi pi-circle-on"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ng-star-inserted ui-radiobutton-label ui-label-active"&gt;Cabin&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;&lt;!----&gt;&lt;!----&gt;&lt;label _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" label="Chair" value="Chair" id="Chair" class="ng-untouched ng-pristine ng-valid"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="Chair"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ng-star-inserted ui-radiobutton-label"&gt;Chair&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row cabin-sap ng-star-inserted"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-3 padd0"&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt;Chair Count&lt;/label&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-9 padd0 time"&gt;<br/>
+                            &lt;!----&gt;<br/>
+                            &lt;input _ngcontent-c39="" class="form-control w100 fl ng-untouched ng-pristine ng-valid" type="text"&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row cabin-sap ng-star-inserted"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-3 padd0"&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt;Chairs&lt;/label&gt;<br/>
+                           &lt;/div&gt;&lt;!----&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-7 padd0 ng-star-inserted" style="padding: 5px 17px;"&gt;<br/>
+                             1 &nbsp; &lt;span _ngcontent-c39=""&gt;No. Of Chairs&lt;/span&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-sx-2 padd0" hidden&gt;<br/>
+                            &lt;button _ngcontent-c39="" class="btn btn-add fl" name="add-new" type="button" id="AddTable"&gt;&lt;i _ngcontent-c39="" aria-hidden="true" class="fa fa-fw" title="Add new chairs"&gt;&lt;/i&gt;&lt;/button&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row cabin-sap ng-star-inserted" style=""&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-3 padd0"&gt;<br/>
+                             Chair 1 &lt;span _ngcontent-c39="" class="mandate"&gt; *&lt;/span&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-7 padd0"&gt;<br/>
+                            &lt;!----&gt;<br/>
+                            &lt;input _ngcontent-c39="" class="form-control w100 fl ng-untouched ng-pristine ng-valid" type="text" id="0.940216687732115TableName0"&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-2 padd0"&gt;<br/>
+                            &lt;!----&gt;&lt;!----&gt;&lt;button _ngcontent-c39="" class="btn btn-rem fl ng-star-inserted" type="button" id="1DeleteTable"&gt;&lt;i _ngcontent-c39="" aria-hidden="true" class="fa fa-fw" title="Deactivate Chair"&gt;&lt;/i&gt;&lt;/button&gt;&lt;!----&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row cabin-sap ng-star-inserted"&gt;<br/>
+                           &lt;!----&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="ng-star-inserted" style=""&gt;<br/>
+                            &lt;!----&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                             &lt;!----&gt;<br/>
+                             &lt;div _ngcontent-c39="" class="ng-star-inserted"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="col-xs-3 padd0"&gt;<br/>
+                              &lt;!----&gt;&lt;label _ngcontent-c39="" class="control-label ng-star-inserted"&gt; Assign KAM (Chair)&lt;span _ngcontent-c39="" class="mandate"&gt;*&lt;/span&gt;&lt;/label&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="col-xs-9  padd0"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="col-xs-3 padd0"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="checkbox c-checkbox newcb tabno"&gt;<br/>
+                              &lt;label _ngcontent-c39=""&gt;&lt;input _ngcontent-c39="" name="tabno"&gt;&lt;span _ngcontent-c39="" class="assign-chair"&gt;Chair 1&lt;/span&gt;&lt;/label&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="col-xs-9   overflow-down"&gt;<br/>
+                              &lt;!----&gt;&lt;p-multiselect _ngcontent-c39="" class="ng-tns-c42-16 ui-inputwrapper-filled ng-pristine ng-valid ng-touched" id="0TableWiseKam0"&gt;<br/>
+                              &lt;div class="ng-tns-c42-16 ui-multiselect ui-widget ui-state-default ui-corner-all ui-multiselect-open" style="width: 100%; border: 1px solid rgb(236, 236, 237);"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input class="ng-tns-c42-16" readonly type="text"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-multiselect-label-container" title="Choose"&gt;<br/>
+                              &lt;span class="ui-multiselect-label ui-corner-all" style="border: 2px solid red;"&gt;&lt;!----&gt;&lt;!----&gt;Choose&lt;!----&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ng-tns-c42-16 ui-multiselect-trigger ui-state-default ui-corner-right"&gt;<br/>
+                              &lt;span class="ui-multiselect-trigger-icon ui-clickable pi pi-chevron-down"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;div class="ng-trigger ng-trigger-overlayAnimation ng-tns-c42-16 ui-multiselect-panel ui-widget ui-widget-content ui-corner-all ui-shadow ng-star-inserted" style="z-index: 1004; top: -238px; left: 0px; transform: translateY(0px); opacity: 1;"&gt;<br/>
+                              &lt;!----&gt;<br/>
+                              &lt;div class="ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;!----&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget ng-tns-c42-16 ng-star-inserted"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input class="ng-tns-c42-16" readonly type="checkbox"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;div class="ui-multiselect-filter-container ng-tns-c42-16 ng-star-inserted"&gt;<br/>
+                              &lt;input class="ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" type="text" style="border: 2px solid red;"&gt;&lt;span class="ui-multiselect-filter-icon pi pi-search"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;&lt;a class="ui-multiselect-close ui-corner-all" tabindex="0"&gt;&lt;span class="pi pi-times"&gt;&lt;/span&gt;&lt;/a&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-multiselect-items-wrapper" style="max-height: 200px;"&gt;<br/>
+                              &lt;ul class="ui-multiselect-items ui-multiselect-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"&gt;<br/>
+                              &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Pradnya Daulat Salve" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Pradnya Daulat Salve&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="PRABHU G DHOLAKIA" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;PRABHU G DHOLAKIA&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="ASHISH j DESAI" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;ASHISH j DESAI&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Master Admin" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Master Admin&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Parth Moradiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Parth Moradiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Shivam k Kansara" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Shivam k Kansara&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="KAL JORDEN" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;KAL JORDEN&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="abc pqr xyz" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;abc pqr xyz&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Sunny Rajpurohit" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Sunny Rajpurohit&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Hitesh Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Hitesh Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Tejas P Gadhiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Tejas P Gadhiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="ANKIT SETHNA (ADMIN)" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;ANKIT SETHNA (ADMIN)&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Shyam Khokhriya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Shyam Khokhriya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Tejas Gadhiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Tejas Gadhiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Tejas P. Gadhiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Tejas P. Gadhiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Mohit M Malviya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Mohit M Malviya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Rahul R R" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Rahul R R&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Shyam V Khokhariya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Shyam V Khokhariya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Pooja K Kansara" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Pooja K Kansara&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Sandip Bhai" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Sandip Bhai&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="DAVID FENG (SHANGHAI)" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;DAVID FENG (SHANGHAI)&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="ASHOK NADODA" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;ASHOK NADODA&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="JAYDEEP GADHIYA" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;JAYDEEP GADHIYA&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="JAINISH GAJERA" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;JAINISH GAJERA&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="DHAVAL D. DIHORA" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;DHAVAL D. DIHORA&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="MILAN CHOPDA" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;MILAN CHOPDA&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="iuytre" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;iuytre&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="ytrerghjjh" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;ytrerghjjh&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="test tq test" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;test tq test&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Rohit Vaghasiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Rohit Vaghasiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Jenish Ghanshyam Mangukiya" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Jenish Ghanshyam Mangukiya&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Raj Ravi Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Raj Ravi Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Raj Ravi Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Raj Ravi Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Raj Ravi Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Raj Ravi Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Raj Ravi Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Raj Ravi Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Raj Ravi Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Raj Ravi Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Raj Ravi Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Raj Ravi Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Raj Ravi Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Raj Ravi Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Raj Ravi Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Raj Ravi Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Ankit B Gandhi" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Ankit B Gandhi&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Ankit B Gandhi" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Ankit B Gandhi&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Aqwe" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Aqwe&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Krishna sdfghj Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Krishna sdfghj Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;p-multiselectitem class="ng-tns-c42-16 ng-star-inserted" style=""&gt;<br/>
+                              &lt;li class="ui-multiselect-item ui-corner-all" aria-label="Krishna dfghj Patel" tabindex="0" style="display: block;"&gt;<br/>
+                              &lt;div class="ui-chkbox ui-widget"&gt;<br/>
+                              &lt;div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"&gt;<br/>
+                              &lt;span class="ui-chkbox-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;&lt;span class="ng-star-inserted"&gt;Krishna dfghj Patel&lt;/span&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+                              &lt;/p-multiselectitem&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                              &lt;/ul&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/p-multiselect&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="clearfix"&gt;&lt;/div&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/div&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row cabin-sap"&gt;<br/>
+                           &lt;!----&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-md-3 col-xs-3 padd0 ng-star-inserted"&gt;<br/>
+                            &lt;label _ngcontent-c39="" class="control-label"&gt;Type&lt;/label&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-md-9 col-xs-9  padd0 time"&gt;<br/>
+                            &lt;!----&gt;&lt;!----&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="radio c-radio time ng-star-inserted"&gt;<br/>
+                             &lt;label _ngcontent-c39=""&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" id="CabinType" label="Public" value="Public" class="ng-untouched ng-pristine ng-valid"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="Public"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default ui-state-active"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable pi pi-circle-on"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ng-star-inserted ui-radiobutton-label ui-label-active"&gt;Public&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;&lt;label _ngcontent-c39=""&gt;<br/>
+                              &lt;p-radiobutton _ngcontent-c39="" id="CabinType" label="Private" value="Private" class="ng-untouched ng-pristine ng-valid"&gt;<br/>
+                              &lt;div class="ui-radiobutton ui-widget"&gt;<br/>
+                              &lt;div class="ui-helper-hidden-accessible"&gt;<br/>
+                              &lt;input type="radio" value="Private"&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;div class="ui-radiobutton-box ui-widget ui-state-default"&gt;<br/>
+                              &lt;span class="ui-radiobutton-icon ui-clickable"&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                              &lt;/div&gt;&lt;!----&gt;<br/>
+                              &lt;label class="ui-radiobutton-label ng-star-inserted"&gt;Private&lt;/label&gt;<br/>
+                              &lt;/p-radiobutton&gt;&lt;/label&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;<br/>
+                         &lt;/div&gt;<br/>
+                        &lt;/div&gt;<br/>
+                        &lt;div _ngcontent-c39="" class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom:40px; "&gt;<br/>
+                         &lt;div _ngcontent-c39="" class="box-container-white cabin-container"&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row cabin-sap"&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="col-xs-12 padd0"&gt;<br/>
+                            &lt;h4 _ngcontent-c39=""&gt;Working Day/Time &lt;/h4&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;&lt;!----&gt;<br/>
+                          &lt;div _ngcontent-c39="" class="row ng-star-inserted"&gt;<br/>
+                           &lt;!----&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="row ng-star-inserted" style=""&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-2 col-xs-3 padd0 mt10"&gt;<br/>
+                             &lt;div _ngcontent-c39="" class="workingday-txt"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="checkbox c-checkbox newcb "&gt;<br/>
+                              &lt;label _ngcontent-c39=""&gt;&lt;input _ngcontent-c39="" disabled name="wdays" type="checkbox" class="Monday true ng-untouched ng-pristine" id="MondayWorkinDaysStatus"&gt;&lt;span _ngcontent-c39=""&gt;Mon&lt;/span&gt;&lt;/label&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/div&gt;<br/>
+                            &lt;/div&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-10 col-xs-9 mt10"&gt;<br/>
+                             &lt;srk-time-range-slider _ngcontent-c39="" _nghost-c43=""&gt;<br/>
+                              &lt;div _ngcontent-c43="" class="slider-bar"&gt;<br/>
+                              &lt;span _ngcontent-c43="" class="slider-hilight-bar" style="width: 58px; left: 52px;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-click-bar"&gt;&lt;span _ngcontent-c43="" class="slider-left-drag-pointer" style="left: 52px; z-index: 1;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-right-drag-pointer" style="left: 110px; z-index: 0;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 20px; z-index: 1;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;09:00 AM&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 78px; z-index: 0;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;7:00 PM&lt;/span&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/srk-time-range-slider&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="row ng-star-inserted" style=""&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-2 col-xs-3 padd0 mt10"&gt;<br/>
+                             &lt;div _ngcontent-c39="" class="workingday-txt"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="checkbox c-checkbox newcb "&gt;<br/>
+                              &lt;label _ngcontent-c39=""&gt;&lt;input _ngcontent-c39="" disabled name="wdays" type="checkbox" class="Tuesday true ng-untouched ng-pristine" id="TuesdayWorkinDaysStatus"&gt;&lt;span _ngcontent-c39=""&gt;Tue&lt;/span&gt;&lt;/label&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/div&gt;<br/>
+                            &lt;/div&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-10 col-xs-9 mt10"&gt;<br/>
+                             &lt;srk-time-range-slider _ngcontent-c39="" _nghost-c43=""&gt;<br/>
+                              &lt;div _ngcontent-c43="" class="slider-bar"&gt;<br/>
+                              &lt;span _ngcontent-c43="" class="slider-hilight-bar" style="width: 58px; left: 52px;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-click-bar"&gt;&lt;span _ngcontent-c43="" class="slider-left-drag-pointer" style="left: 52px; z-index: 1;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-right-drag-pointer" style="left: 110px; z-index: 0;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 20px; z-index: 1;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;09:00 AM&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 78px; z-index: 0;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;7:00 PM&lt;/span&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/srk-time-range-slider&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="row ng-star-inserted" style=""&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-2 col-xs-3 padd0 mt10"&gt;<br/>
+                             &lt;div _ngcontent-c39="" class="workingday-txt"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="checkbox c-checkbox newcb "&gt;<br/>
+                              &lt;label _ngcontent-c39=""&gt;&lt;input _ngcontent-c39="" disabled name="wdays" type="checkbox" class="Wednesday true ng-untouched ng-pristine" id="WednesdayWorkinDaysStatus"&gt;&lt;span _ngcontent-c39=""&gt;Wed&lt;/span&gt;&lt;/label&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/div&gt;<br/>
+                            &lt;/div&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-10 col-xs-9 mt10"&gt;<br/>
+                             &lt;srk-time-range-slider _ngcontent-c39="" _nghost-c43=""&gt;<br/>
+                              &lt;div _ngcontent-c43="" class="slider-bar"&gt;<br/>
+                              &lt;span _ngcontent-c43="" class="slider-hilight-bar" style="width: 58px; left: 52px;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-click-bar"&gt;&lt;span _ngcontent-c43="" class="slider-left-drag-pointer" style="left: 52px; z-index: 1;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-right-drag-pointer" style="left: 110px; z-index: 0;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 20px; z-index: 1;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;09:00 AM&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 78px; z-index: 0;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;7:00 PM&lt;/span&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/srk-time-range-slider&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="row ng-star-inserted" style=""&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-2 col-xs-3 padd0 mt10"&gt;<br/>
+                             &lt;div _ngcontent-c39="" class="workingday-txt"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="checkbox c-checkbox newcb "&gt;<br/>
+                              &lt;label _ngcontent-c39=""&gt;&lt;input _ngcontent-c39="" disabled name="wdays" type="checkbox" class="Thursday true ng-untouched ng-pristine" id="ThursdayWorkinDaysStatus"&gt;&lt;span _ngcontent-c39=""&gt;Thu&lt;/span&gt;&lt;/label&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/div&gt;<br/>
+                            &lt;/div&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-10 col-xs-9 mt10"&gt;<br/>
+                             &lt;srk-time-range-slider _ngcontent-c39="" _nghost-c43=""&gt;<br/>
+                              &lt;div _ngcontent-c43="" class="slider-bar"&gt;<br/>
+                              &lt;span _ngcontent-c43="" class="slider-hilight-bar" style="width: 58px; left: 52px;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-click-bar"&gt;&lt;span _ngcontent-c43="" class="slider-left-drag-pointer" style="left: 52px; z-index: 1;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-right-drag-pointer" style="left: 110px; z-index: 0;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 20px; z-index: 1;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;09:00 AM&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 78px; z-index: 0;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;7:00 PM&lt;/span&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/srk-time-range-slider&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="row ng-star-inserted" style=""&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-2 col-xs-3 padd0 mt10"&gt;<br/>
+                             &lt;div _ngcontent-c39="" class="workingday-txt"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="checkbox c-checkbox newcb "&gt;<br/>
+                              &lt;label _ngcontent-c39=""&gt;&lt;input _ngcontent-c39="" disabled name="wdays" type="checkbox" class="Friday true ng-untouched ng-pristine" id="FridayWorkinDaysStatus"&gt;&lt;span _ngcontent-c39=""&gt;Fri&lt;/span&gt;&lt;/label&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/div&gt;<br/>
+                            &lt;/div&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-10 col-xs-9 mt10"&gt;<br/>
+                             &lt;srk-time-range-slider _ngcontent-c39="" _nghost-c43=""&gt;<br/>
+                              &lt;div _ngcontent-c43="" class="slider-bar"&gt;<br/>
+                              &lt;span _ngcontent-c43="" class="slider-hilight-bar" style="width: 58px; left: 52px;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-click-bar"&gt;&lt;span _ngcontent-c43="" class="slider-left-drag-pointer" style="left: 52px; z-index: 1;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-right-drag-pointer" style="left: 110px; z-index: 0;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 20px; z-index: 1;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;09:00 AM&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 78px; z-index: 0;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;7:00 PM&lt;/span&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/srk-time-range-slider&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                           &lt;div _ngcontent-c39="" class="row ng-star-inserted" style=""&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-2 col-xs-3 padd0 mt10"&gt;<br/>
+                             &lt;div _ngcontent-c39="" class="workingday-txt"&gt;<br/>
+                              &lt;div _ngcontent-c39="" class="checkbox c-checkbox newcb "&gt;<br/>
+                              &lt;label _ngcontent-c39=""&gt;&lt;input _ngcontent-c39="" disabled name="wdays" type="checkbox" class="Saturday true ng-untouched ng-pristine" id="SaturdayWorkinDaysStatus"&gt;&lt;span _ngcontent-c39=""&gt;Sat&lt;/span&gt;&lt;/label&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/div&gt;<br/>
+                            &lt;/div&gt;<br/>
+                            &lt;div _ngcontent-c39="" class="col-sm-10 col-xs-9 mt10"&gt;<br/>
+                             &lt;srk-time-range-slider _ngcontent-c39="" _nghost-c43=""&gt;<br/>
+                              &lt;div _ngcontent-c43="" class="slider-bar"&gt;<br/>
+                              &lt;span _ngcontent-c43="" class="slider-hilight-bar" style="width: 58px; left: 52px;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-click-bar"&gt;&lt;span _ngcontent-c43="" class="slider-left-drag-pointer" style="left: 52px; z-index: 1;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="slider-right-drag-pointer" style="left: 110px; z-index: 0;"&gt;&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 20px; z-index: 1;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;09:00 AM&lt;/span&gt;&lt;span _ngcontent-c43="" class="tool-tip" style="left: 78px; z-index: 0;"&gt;&lt;span _ngcontent-c43="" class="arrow"&gt;&lt;/span&gt;7:00 PM&lt;/span&gt;&lt;/span&gt;<br/>
+                              &lt;/div&gt;<br/>
+                             &lt;/srk-time-range-slider&gt;<br/>
+                            &lt;/div&gt;<br/>
+                           &lt;/div&gt;<br/>
+                          &lt;/div&gt;<br/>
+                         &lt;/div&gt;<br/>
+                        &lt;/div&gt;<br/>
+                       &lt;/div&gt;<br/>
+                       &lt;div _ngcontent-c39="" class="bottom-top footer-fixed"&gt;<br/>
+                        &lt;div _ngcontent-c39="" class="col-xs-12"&gt;<br/>
+                         &lt;div _ngcontent-c39="" class="form-group btn-box pull-right marg5"&gt;<br/>
+                          &lt;button _ngcontent-c39="" class="btn btn-default btn-main btn-first" id="ClearChanges" type="button" hidden&gt;&lt;i _ngcontent-c39="" class="fa fa-refresh"&gt;&lt;/i&gt; Reset&lt;/button&gt;&lt;!----&gt;&lt;!----&gt;&lt;button _ngcontent-c39="" class="btn btn-primary btn-main ng-star-inserted" type="button"&gt;&lt;i _ngcontent-c39="" class="fa fa-floppy-o"&gt;&lt;/i&gt; Save&lt;/button&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                         &lt;/div&gt;<br/>
+                        &lt;/div&gt;<br/>
+                       &lt;/div&gt;<br/>
+                      &lt;/div&gt;<br/>
+                     &lt;/app-add-cabin&gt;<br/>
+                    &lt;/div&gt;<br/>
+                   &lt;/div&gt;<br/>
+                   &lt;div _ngcontent-c22="" class="tab-pane fade" id="Cabin Allotment"&gt;<br/>
+                    &lt;div _ngcontent-c22="" class="row"&gt;<br/>
+                     &lt;!----&gt;<br/>
+                    &lt;/div&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div _ngcontent-c22="" class="deletePopUp"&gt;<br/>
+                   &lt;p-confirmdialog _ngcontent-c22="" accepticon="" id="confirmationClientBox" rejecticon="" width="425" class="ng-tns-c37-13"&gt;<br/>
+                    &lt;!----&gt;<br/>
+                   &lt;/p-confirmdialog&gt;<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/app-appointment-master&gt;<br/>
+                &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div _ngcontent-c15="" class="deletePopUp"&gt;<br/>
+              &lt;p-confirmdialog _ngcontent-c15="" class="ng-tns-c15-11 ng-tns-c37-12" accepticon="" header="Delete Confirmation" id="confirmationClientBox" rejecticon="" width="425"&gt;<br/>
+               &lt;!----&gt;<br/>
+              &lt;/p-confirmdialog&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/app-sales-master&gt;<br/>
+            &lt;div _ngcontent-c14="" class="module-load-indicator"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/app-admin-dashboard&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;&lt;!----&gt;<br/>
+     &lt;app-carry-forward-system-overlay _ngcontent-c7="" class="ng-tns-c7-5" _nghost-c11=""&gt;<br/>
+      &lt;p-dialog _ngcontent-c11="" header="Carry forward system" modal="true" class="ng-tns-c1-10"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/p-dialog&gt;<br/>
+     &lt;/app-carry-forward-system-overlay&gt;<br/>
+    &lt;/app-admin-user&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;p-dialog _ngcontent-c0="" appendto="body" height="110" id="loaderDialog" styleclass="loaderBox" width="200" class="ng-tns-c1-0"&gt;<br/>
+    &lt;!----&gt;<br/>
+   &lt;/p-dialog&gt;<br/>
+   &lt;app-srk-loader _ngcontent-c0="" _nghost-c2="" class="ng-tns-c2-1"&gt;<br/>
+    &lt;div _ngcontent-c2="" class="srkloader ng-trigger ng-trigger-loader" style="display: none; opacity: 0;"&gt;<br/>
+     &lt;div _ngcontent-c2="" class="lds-roller"&gt;<br/>
+      &lt;div _ngcontent-c2="" class="ng-tns-c2-1"&gt;&lt;/div&gt;<br/>
+      &lt;div _ngcontent-c2="" class="ng-tns-c2-1"&gt;&lt;/div&gt;<br/>
+      &lt;div _ngcontent-c2="" class="ng-tns-c2-1"&gt;&lt;/div&gt;<br/>
+      &lt;div _ngcontent-c2="" class="ng-tns-c2-1"&gt;&lt;/div&gt;<br/>
+      &lt;div _ngcontent-c2="" class="ng-tns-c2-1"&gt;&lt;/div&gt;<br/>
+      &lt;div _ngcontent-c2="" class="ng-tns-c2-1"&gt;&lt;/div&gt;<br/>
+      &lt;div _ngcontent-c2="" class="ng-tns-c2-1"&gt;&lt;/div&gt;<br/>
+      &lt;div _ngcontent-c2="" class="ng-tns-c2-1"&gt;&lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/app-srk-loader&gt;<br/>
+   &lt;p-toast _ngcontent-c0="" class="ng-tns-c3-2"&gt;<br/>
+    &lt;div class="ng-tns-c3-2 ui-toast ui-widget ui-toast-top-right"&gt;<br/>
+     &lt;!----&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/p-toast&gt;<br/>
+   &lt;p-dialog _ngcontent-c0="" appendto="body" header="Alert!!!" height="180" width="300" class="ng-tns-c1-3"&gt;<br/>
+    &lt;!----&gt;<br/>
+   &lt;/p-dialog&gt;<br/>
+  &lt;/app-root&gt; &lt;!-- Browser Not Supported Modal --&gt; <br/>
+  &lt;div class="landing-page-overlay" id="landingPageOverlay" style="display: none"&gt; <br/>
+   &lt;div class="landing-page-overlay-content"&gt; <br/>
+    &lt;h3&gt;We dont support this browser&lt;/h3&gt; <br/>
+    &lt;p&gt;It is advised to use latest browser for good user experience and your content security.&lt;/p&gt; <br/>
+    &lt;p&gt;Try latest &lt;a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank" style="font-weight:bold"&gt;Chrome&lt;/a&gt; or &lt;a href="https://support.microsoft.com/en-in/help/17621/internet-explorer-downloads" target="_blank" style="font-weight:bold"&gt;Internet Explorer&lt;/a&gt; browsers &lt;/p&gt;<br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; &lt;!-- /Browser Not Supported Modal --&gt; <br/>
+  &lt;script type="text/javascript"&gt;<br/>
+    if ('serviceWorker' in navigator) {<br/>
+      navigator.serviceWorker.register('/service-worker.js').then(function (registration) {<br/>
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);<br/>
+      });<br/>
+    }<br/>
+<br/>
+    function getBrowerInfo() {<br/>
+      var browserDtl = {<br/>
+        name: '',<br/>
+        version: ''<br/>
+      };<br/>
+      var ua = navigator.userAgent;<br/>
+      var tem;<br/>
+      var M = ua.match(/(opera|chrome|safari|firefox|msie|edge|trident(?=\/))\/?\s*(\d+)/i) || [];<br/>
+      if (/trident/i.test(M[1])) {<br/>
+        tem = /\brv[ :]+(\d+)/g.exec(ua) || [];<br/>
+        browserDtl.name = 'IE';<br/>
+        browserDtl.version = tem[1] || '';<br/>
+        return browserDtl;<br/>
+      }<br/>
+      if (M[1] === 'Chrome') {<br/>
+        tem = ua.match(/\bOPR\/(\d+)/);<br/>
+        if (tem != null) {<br/>
+          browserDtl.name = 'Opera';<br/>
+          browserDtl.version = tem[1] || '';<br/>
+          return browserDtl;<br/>
+        }<br/>
+        tem = ua.match(/\bEdge\/(\d+)/);<br/>
+        if (tem != null) {<br/>
+          browserDtl.name = 'Edge';<br/>
+          browserDtl.version = tem[1] || '';<br/>
+          return browserDtl;<br/>
+        }<br/>
+      }<br/>
+      M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];<br/>
+      if ((tem = ua.match(/version\/(\d+)/i)) != null) {<br/>
+        M.splice(1, 1, tem[1]);<br/>
+      }<br/>
+      browserDtl.name = M[0];<br/>
+      browserDtl.version = M[1];<br/>
+      return browserDtl;<br/>
+    }<br/>
+<br/>
+    var browserDtl = getBrowerInfo();<br/>
+    var browserName = browserDtl.name;<br/>
+    var browserVersion = browserDtl.version;<br/>
+    if ((browserName.toUpperCase() == 'IE' || browserName.toUpperCase() == 'MSIE') && browserVersion &lt; 11) {<br/>
+      var appRoot = document.getElementsByTagName('app-root');<br/>
+      appRoot[0].style.display = 'block';<br/>
+      appRoot[0].style.opacity = '.7';<br/>
+      var overlay = document.getElementById('landingPageOverlay');<br/>
+      overlay.style.display = 'block';<br/>
+    }<br/>
+<br/>
+  &lt;/script&gt; <br/>
+  &lt;script type="text/javascript"&gt;<br/>
+    function addNewTab(obj) {<br/>
+      window.angularComponentReference.zone.run(() =&gt; { window.angularComponentReference.openStoneTab(obj); });<br/>
+    }<br/>
+&lt;/script&gt; <br/>
+  &lt;script type="text/javascript" src="solitaire-pure/final/runtime.7807ab397094f13c7342.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="solitaire-pure/final/polyfills.cf43ab62bd8c7d2d3ce9.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="solitaire-pure/final/scripts.6f11f9c95abbb0ad7cd8.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="solitaire-pure/final/main.331b6a8cac72d208d1d8.js"&gt;&lt;/script&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
